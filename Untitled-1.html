@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lecker - Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* En-tête avec image de fond et semi-transparence */
+        header {
+            background-image: url('https://lh3.googleusercontent.com/p/AF1QipMIfPXHId2JD2XDeET1HaCsOOZzyLUGGhumn5dg=s680-w680-h510'); /* Remplacer cette URL par ton image */
+            background-size: cover;
+            background-position: center;
+            color: rgb(151, 190, 10);
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+        }
+
+        /* Overlay (semi-transparence) pour améliorer la lisibilité du titre */
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* Noir semi-transparent */
+            z-index: 1;
+        }
+
+        header h1 {
+            position: relative;
+            z-index: 2;
+            font-size: 3.5em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ombre pour mieux distinguer le texte */
+            margin: 0;
+        }
+
+        /* Bouton pour voir le menu */
+        .menu-button, .call-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #04250c;
+            color: white;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            position: relative;
+            z-index: 2;
+        }
+
+        .menu-button:hover, .call-button:hover {
+            background-color: #04380d;
+        }
+
+        /* Ajout du numéro de téléphone */
+        .call-button {
+            margin-left: 15px; /* Espace entre les boutons */
+        }
+
+        /* Section du menu */
+        .menu-section {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .menu-item h3 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .menu-item p {
+            margin: 5px 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .menu-item .price {
+            color: #888;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #2d3436;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        @media screen and (max-width: 600px) {
+            .menu-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .menu-item img {
+                margin-bottom: 10px;
+            }
+
+            /* Adaptation du texte et des boutons sur mobile */
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            .menu-button, .call-button {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- En-tête avec image de fond, texte et bouton -->
+<header>
+    <h1>Imbiss Le Kilimandscharo</h1>
+    <a href="#menu-jour" class="menu-button">Heutiges Menu</a>
+    <a href="tel:+33123456789" class="call-button">Call: 0175 32 69 548</a> <!-- Remplace par ton numéro -->
+</header>
+
+<!-- Section Entrées -->
+<section class="menu-section" id="menu-jour">
+    <h2>Menu du Jour</h2>
+    <div class="menu-item">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipMIfPXHId2JD2XDeET1HaCsOOZzyLUGGhumn5dg=s680-w680-h510" alt="Salade César">
+        <div>
+            <h3>Fisch</h3>
+            <p>Salade verte avec croûtons, poulet grillé, et parmesan.</p>
+            <span class="price">19,50 €</span>
+        </div>
+    </div>
+    <div class="menu-item">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipO_VbQkp-CzXC299y1huXl_f5Sz_QXrvnbp3kaQ=s680-w680-h510" alt="Soupe à l'oignon">
+        <div>
+            <h3>DG</h3>
+            <p>Soupe traditionnelle à base d'oignon, gratinée avec du fromage.</p>
+            <span class="price">12,00 €</span>
+        </div>
+    </div>
+</section>
+
+<!-- Section Plats Principaux -->
+<section class="menu-section">
+    <h2>Plats Principaux</h2>
+    <div class="menu-item">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipO6OL2vUp_Q-BoVHTZG38n5dJ4NyqrTl36MpmPF=s680-w680-h510" alt="Filet de Bœuf">
+        <div>
+            <h3>Filet de Bœuf</h3>
+            <p>Filet de bœuf grillé, servi avec pommes de terre et légumes.</p>
+            <span class="price">18,00 €</span>
+        </div>
+    </div>
+    <div class="menu-item">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipNratUJOt5S7uhK4e2b8QIGeLzeBrxkA2xOtE46=s680-w680-h510" alt="Poulet au Curry">
+        <div>
+            <h3>Poulet au Curry</h3>
+            <p>Poulet tendre cuit dans une sauce au curry parfumée, accompagné de riz basmati.</p>
+            <span class="price">14,00 €</span>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="https://via.placeholder.com/100" alt="Poulet au Curry">
+        <div>
+            <h3>Poulet au Curry</h3>
+            <p>Poulet tendre cuit dans une sauce au curry parfumée, accompagné de riz basmati.</p>
+            <span class="price">14,00 €</span>
+        </div>
+    </div>
+</section>
+
+<!-- Section Desserts -->
+<section class="menu-section">
+    <h2>Desserts</h2>
+    <div class="menu-item">
+        <img src="https://via.placeholder.com/100" alt="Tarte au Citron">
+        <div>
+            <h3>Tarte au Citron</h3>
+            <p>Tarte fraîche avec une crème au citron et meringue légère.</p>
+            <span class="price">5,50 €</span>
+        </div>
+    </div>
+    <div class="menu-item">
+        <img src="https://via.placeholder.com/100" alt="Mousse au Chocolat">
+        <div>
+            <h3>Mousse au Chocolat</h3>
+            <p>Mousse légère et onctueuse au chocolat noir.</p>
+            <span class="price">6,00 €</span>
+        </div>
+    </div>
+</section>
+
+<!-- Section Boissons -->
+<section class="menu-section">
+    <h2>Boissons</h2>
+    <div class="menu-item">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipO1LkzxxjB0e2xgdo1FG1Z7tKILm3gRQ4u81r5T=s680-w680-h510" alt="Café">
+        <div>
+            <h3>Café</h3>
+            <p>Café noir classique, idéal pour finir le repas.</p>
+            <span class="price">2,00 €</span>
+        </div>
+    </div>
+
+    <div class="menu-item">
+        <img src="https://lh3.googleusercontent.com/p/AF1QipO1LkzxxjB0e2xgdo1FG1Z7tKILm3gRQ4u81r5T=s680-w680-h510" alt="Café">
+        <div>
+            <h3>Bier</h3>
+            <p>Biere camerounaise.</p>
+            <span class="price">2,00 €</span>
+        </div>
+    </div>
+    <div class="menu-item">
+        <img src="https://via.placeholder.com/100" alt="Jus d'Orange">
+        <div>
+            <h3>Jus d'Orange Frais</h3>
+            <p>Jus d'orange pressé à la main, riche en vitamines.</p>
+            <span class="price">3,50 €</span>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Restaurant Lecker | Tous droits réservés</p>
+</footer>
+
+</body>
+</html>
